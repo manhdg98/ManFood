@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+
+// Routes
+import 'package:manfood/src/routes/routes.dart';
  
 void main() => runApp(MyApp());
  
@@ -7,6 +10,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      routes: routes,
+      initialRoute: 'welcome',
       theme: ThemeData(
         accentColor: Color.fromRGBO(255, 140, 0, 1.0),
         primaryColor: Color.fromRGBO(10, 31, 68, 1.0),
