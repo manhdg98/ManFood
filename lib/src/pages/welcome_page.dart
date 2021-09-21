@@ -48,7 +48,7 @@ class WelcomePage extends StatelessWidget {
                 height: 45.0,
                 child: RaisedButton(
                   onPressed: () {
-
+                    Navigator.pushNamed(context, 'login');
                   },
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(20.0)
