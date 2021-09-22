@@ -13,7 +13,7 @@ class WelcomePage extends StatelessWidget {
             decoration: BoxDecoration(
               image: DecorationImage(
                 fit: BoxFit.cover,
-                image: NetworkImage("https://weeattogether.com/wp-content/uploads/2019/07/Baked-Peaches-iPhone.jpg")
+                image: AssetImage('assets/welcome.jpg'),
               )
             ),
             child: BackdropFilter(

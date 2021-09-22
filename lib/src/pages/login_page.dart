@@ -22,7 +22,8 @@ class LoginPage extends StatelessWidget {
               width: double.infinity,
               height: 350.0,
               fit: BoxFit.cover,
-              image: NetworkImage('http://noitrotaigia.com/wp-content/uploads/2015/05/Fast-food.jpg')),
+              image: AssetImage('assets/login_page.jpg')
+              ),
           Container(
             margin: EdgeInsets.only( top: 50.0),
             child: backButton(context, Colors.white),
@@ -78,13 +79,18 @@ class LoginPage extends StatelessWidget {
                             fontWeight: FontWeight.w500,
                             fontSize: 15.0
                           )),
-                          Container(
-                            margin: EdgeInsets.symmetric( horizontal: 10.0 ),
-                            child: Text(' Sign up ? ', style: TextStyle(
-                              color: Theme.of(context).accentColor,
-                              fontWeight: FontWeight.w400,
-                              fontSize: 15.0
-                            ))
+                          GestureDetector(
+                            onTap: () {
+                              Navigator.pushNamed(context, 'sign-up');
+                            },
+                            child: Container(
+                              margin: EdgeInsets.symmetric( horizontal: 10.0 ),
+                              child: Text(' Sign up ? ', style: TextStyle(
+                                color: Theme.of(context).accentColor,
+                                fontWeight: FontWeight.w400,
+                                fontSize: 15.0
+                              ))
+                            ),
                           )
                         ],
                       )
