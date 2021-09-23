@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:manfood/src/colors/colors.dart';
-import 'package:manfood/src/widgets/back_button.dart';
+import 'package:manfood/src/feature/presentation/widgets/back_button.dart';
 
 class SignUpPage extends StatelessWidget {
 

@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 // colors
 import 'package:manfood/src/colors/colors.dart';
 // widgets
-import 'package:manfood/src/widgets/back_button.dart';
+import 'package:manfood/src/feature/presentation/widgets/back_button.dart';
 
 class LoginPage extends StatelessWidget {
   @override
@@ -153,7 +153,7 @@ Widget _buttonLogin( BuildContext context ) {
     margin: EdgeInsets.only(top: 30.0), 
     child: RaisedButton(
       onPressed: () {
-        Navigator.pushNamed(context, 'login');
+        Navigator.pushNamed(context, 'tabs');
       },
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(20.0)
