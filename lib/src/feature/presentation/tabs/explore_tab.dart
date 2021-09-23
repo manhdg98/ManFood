@@ -5,10 +5,24 @@ class ExploreTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
-      child: Container(
-        child: Text('Explore'),
+    return SafeArea(
+      child: CustomScrollView(
+        slivers: [
+          SliverList(
+            delegate: SliverChildListDelegate(
+              [
+                _topBar(context)
+              ]
+            ),
+          )
+        ],
       ),
     );
   }
+}
+
+Widget _topBar(BuildContext context) {
+  return Row(
+
+  );
 }

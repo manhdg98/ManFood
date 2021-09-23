@@ -43,7 +43,7 @@ class _TabsPageState extends State<TabsPage> {
       unselectedItemColor: Colors.grey,
       currentIndex: _selectedItemIndex,
       onTap: _cambiarWidget,
-      showSelectedLabels: true,
+      showUnselectedLabels: true,
       items:<BottomNavigationBarItem>[
         BottomNavigationBarItem(
           icon: Icon(Icons.explore),
