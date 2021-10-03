@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:manfood/src/feature/presentation/widgets/back_button.dart';
+import 'package:manfood/src/feature/presentation/commons_widgets/back_button.dart';
+import 'package:manfood/src/feature/presentation/commons_widgets/header_text.dart';
 
 class ForgotPassword extends StatelessWidget {
 
@@ -20,11 +21,7 @@ class ForgotPassword extends StatelessWidget {
           padding: EdgeInsets.all(30.0),
           child: Column(
             children: [
-              Text("Forgot password", style: TextStyle(
-                color: Theme.of(context).primaryColor,
-                fontWeight: FontWeight.bold,
-                fontSize: 30.0
-              )), 
+              headerText("Forgot password", Theme.of(context).primaryColor, FontWeight.bold, 30.0),
               Container(
                 padding: EdgeInsets.all( 10.0 ),
                 child: Text("Please enter your email address. You will receive a link to create a new password via email", 
@@ -106,12 +103,7 @@ void _showAlerta( BuildContext context) {
               ),
               Container(
                 margin: EdgeInsets.all(15.0),
-                child: Text('Your password has been reset',
-                style: TextStyle(
-                  color: Theme.of(context).primaryColor,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20.0
-                ))
+                child: headerText('Your password has been reset', Theme.of(context).primaryColor, FontWeight.bold, 20.0)
               ),
               Container(
                 margin: EdgeInsets.all(15.0),

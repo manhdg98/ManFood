@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:manfood/src/feature/presentation/commons_widgets/header_text.dart';
 
 class WelcomePage extends StatelessWidget {
 
@@ -29,19 +30,11 @@ class WelcomePage extends StatelessWidget {
             children: [
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 50.0),
-                child: Text('DELIVERED FAST FOOD TO YOUR DOOR', style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 45.0
-                ),),
+                child: headerText('DELIVERED FAST FOOD TO YOUR DOOR', Colors.white, FontWeight.bold, 45.0)
               ),
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 50.0, vertical: 30.0),
-                child: Text('Set exact location to find the right restaurants near you', style: TextStyle(
-                  color: Colors.white,
-                  fontWeight: FontWeight.w400,
-                  fontSize:17.0
-                ),),
+                child: headerText('Set exact location to find the right restaurants near you', Colors.white, FontWeight.w400, 17.0)
               ),
               Container(
                 width: 350.0,

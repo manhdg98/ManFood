@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:manfood/src/colors/colors.dart';
-import 'package:manfood/src/feature/presentation/widgets/back_button.dart';
+import 'package:manfood/src/feature/presentation/commons_widgets/back_button.dart';
+import 'package:manfood/src/feature/presentation/commons_widgets/header_text.dart';
 
 class SignUpPage extends StatelessWidget {
 
@@ -21,11 +22,7 @@ class SignUpPage extends StatelessWidget {
           padding: EdgeInsets.all(30),
           child: Column(
             children: [
-              Text("Create an account", style: TextStyle(
-                color: Theme.of(context).primaryColor,
-                fontWeight: FontWeight.bold,
-                fontSize: 30.0
-              )),
+              headerText("Create an account", Theme.of(context).primaryColor, FontWeight.bold, 30.0),
               _usernameInput(context),
               _emailInput(context),
               _phoneInput(context),

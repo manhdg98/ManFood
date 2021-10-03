@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:manfood/src/feature/presentation/tabs/explore_tab.dart';
-import 'package:manfood/src/feature/presentation/tabs/favourite_tab.dart';
-import 'package:manfood/src/feature/presentation/tabs/my_order_page.dart';
-import 'package:manfood/src/feature/presentation/tabs/profile_tab.dart';
+import 'package:manfood/src/feature/presentation/tabs/explore_tab/View/explore_tab.dart';
+import 'package:manfood/src/feature/presentation/tabs/favourite_tab/View/favourite_tab.dart';
+import 'package:manfood/src/feature/presentation/tabs/my_order_page/View/my_order_page.dart';
+import 'package:manfood/src/feature/presentation/tabs/profile_tab/View/profile_tab.dart';
 
 class TabsPage extends StatefulWidget {
   TabsPage({Key? key}) : super(key: key);
