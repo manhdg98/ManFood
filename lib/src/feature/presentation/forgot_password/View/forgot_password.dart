@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:manfood/src/feature/presentation/commons_widgets/alert_dialog.dart';
 import 'package:manfood/src/feature/presentation/commons_widgets/back_button.dart';
 import 'package:manfood/src/feature/presentation/commons_widgets/header_text.dart';
 
@@ -83,63 +84,19 @@ Widget _sendButton( BuildContext context ) {
   );
 } 
 
+// assets/lock.png 'Your password has been reset' "You'll shortly receive an email with a code to setup an password" 
+// "You'll shortly receive an email with a code to setup an password"
 void _showAlerta( BuildContext context) {
-  showDialog(
-    context: context,
-    barrierDismissible: true,
-    builder: ( BuildContext context ) {
-      return AlertDialog(
-        shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(20.0))
-        ),
-        content: Container(
-          height: 400,
-          child: Column(
-            children: [
-              Image(
-                image: AssetImage('assets/lock.png'),
-                width: 130,
-                height: 130,
-              ),
-              Container(
-                margin: EdgeInsets.all(15.0),
-                child: headerText('Your password has been reset', Theme.of(context).primaryColor, FontWeight.bold, 20.0)
-              ),
-              Container(
-                margin: EdgeInsets.all(15.0),
-                child: Text("You'll shortly receive an email with a code to setup an password",
-                style: TextStyle(
-                  color: Theme.of(context).primaryColor,
-                  fontWeight: FontWeight.bold,
-                  fontSize: 15.0
-                ))
-              ),
-              _doneButton(context)
-            ],
-          ),
-        ),
-      );
-    }
+  showAlertDialog(
+    context, 
+    AssetImage('assets/lock.png'), 
+    'Your password has been reset', 
+    "You'll shortly receive an email with a code to setup an password", 
+    'Done', 
+    _goToLoginPage(context)
   );
 }
 
-Widget _doneButton( BuildContext context ) {
-  return Container(
-    width: 370.0,
-    height: 45.0,
-    margin: EdgeInsets.only(top: 40.0), 
-    child: RaisedButton(
-      onPressed: () {
-        Navigator.pushNamed(context, 'login');
-      },
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20.0)
-      ),
-      color: Theme.of(context).accentColor,
-      child: Text('Done', style: TextStyle(
-        color: Colors.white,
-        fontSize: 15.0
-      )),
-    )
-  );
+_goToLoginPage(BuildContext context) {
+  // Navigator.pushNamed(context, 'login');
 }
