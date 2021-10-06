@@ -7,9 +7,9 @@ void showAlertDialog(
     String headerTitle, 
     String headerSubTitle,
     String labelButton,
-    Function doneButtonFunc
-  ) {
-  showDialog(
+    Widget doneButton
+  ) async {
+  await showDialog(
     context: context,
     barrierDismissible: true,
     builder: ( BuildContext context ) {
@@ -39,7 +39,7 @@ void showAlertDialog(
                   fontSize: 15.0
                 ))
               ),
-              _doneButton(context, labelButton, doneButtonFunc)
+              doneButton
             ],
           ),
         ),
@@ -48,23 +48,3 @@ void showAlertDialog(
   );
 }
 
-Widget _doneButton( BuildContext context,String labelButton, Function doneButtonFunc) {
-  return Container(
-    width: 370.0,
-    height: 45.0,
-    margin: EdgeInsets.only(top: 40.0), 
-    child: RaisedButton(
-      onPressed: () {
-        doneButtonFunc();
-      },
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20.0)
-      ),
-      color: Theme.of(context).accentColor,
-      child: Text(labelButton, style: TextStyle(
-        color: Colors.white,
-        fontSize: 15.0
-      )),
-    )
-  );
-}

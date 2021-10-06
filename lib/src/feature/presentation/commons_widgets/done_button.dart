@@ -1,0 +1,22 @@
+import 'package:flutter/material.dart';
+
+Widget doneButton( BuildContext context,String labelButton) {
+  return Container(
+    width: 370.0,
+    height: 45.0,
+    margin: EdgeInsets.only(top: 40.0), 
+    child: RaisedButton(
+      onPressed: () {
+        Navigator.pushNamed(context, 'login');
+      },
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(20.0)
+      ),
+      color: Theme.of(context).accentColor,
+      child: Text(labelButton, style: TextStyle(
+        color: Colors.white,
+        fontSize: 15.0
+      )),
+    )
+  );
+}

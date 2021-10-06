@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:manfood/src/feature/presentation/commons_widgets/alert_dialog.dart';
 import 'package:manfood/src/feature/presentation/commons_widgets/back_button.dart';
+import 'package:manfood/src/feature/presentation/commons_widgets/done_button.dart';
 import 'package:manfood/src/feature/presentation/commons_widgets/header_text.dart';
 
 class ForgotPassword extends StatelessWidget {
@@ -93,10 +94,9 @@ void _showAlerta( BuildContext context) {
     'Your password has been reset', 
     "You'll shortly receive an email with a code to setup an password", 
     'Done', 
-    _goToLoginPage(context)
+    doneButton(context, 'Done')
   );
 }
 
-_goToLoginPage(BuildContext context) {
-  // Navigator.pushNamed(context, 'login');
-}
+
+
