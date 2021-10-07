@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:manfood/src/feature/presentation/commons_widgets/alert_dialog.dart';
+import 'package:manfood/src/feature/presentation/commons_widgets/done_button.dart';
 import 'package:manfood/src/feature/presentation/tabs/explore_tab/View/explore_tab.dart';
 import 'package:manfood/src/feature/presentation/tabs/favourite_tab/View/favourite_tab.dart';
 import 'package:manfood/src/feature/presentation/tabs/my_order_page/View/my_order_page.dart';
@@ -12,6 +14,14 @@ class TabsPage extends StatefulWidget {
 }
 
 class _TabsPageState extends State<TabsPage> {
+  
+  @override
+  void initState() {
+    super.initState();
+    Future.delayed(Duration.zero, () {
+      _pedirLocation(context);
+    });
+  }
 
   List<Widget> _widgetOptions = [
     ExploreTab(),
@@ -64,5 +74,38 @@ class _TabsPageState extends State<TabsPage> {
       ]
     );
   }
+
+  Future _pedirLocation(BuildContext context) async {
+    showAlertDialog(
+      context, 
+      AssetImage('assets/location.jpg'),
+      "Enable Your Location", 
+      "Please allow to use your location to show nearby restaurant on the map.", 
+      _doneButton(context, 'Enable Location')
+    );
+  }
+
+  Widget _doneButton( BuildContext context,String labelButton) {
+  return Container(
+    width: 370.0,
+    height: 45.0,
+    margin: EdgeInsets.only(top: 40.0), 
+    child: RaisedButton(
+      onPressed: () {
+        print("location");
+      },
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(20.0)
+      ),
+      color: Theme.of(context).accentColor,
+      child: Text(labelButton, style: TextStyle(
+        color: Colors.white,
+        fontSize: 15.0
+      )),
+    )
+  );
 }
+}
+
+
 

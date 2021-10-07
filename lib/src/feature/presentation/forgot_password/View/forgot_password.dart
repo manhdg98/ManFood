@@ -92,8 +92,7 @@ void _showAlerta( BuildContext context) {
     context, 
     AssetImage('assets/lock.png'), 
     'Your password has been reset', 
-    "You'll shortly receive an email with a code to setup an password", 
-    'Done', 
+    "You'll shortly receive an email with a code to setup an password",  
     doneButton(context, 'Done')
   );
 }
